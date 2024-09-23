@@ -1,3 +1,5 @@
+package store.teamti;
+
 import java.util.Scanner;
 
 /**
