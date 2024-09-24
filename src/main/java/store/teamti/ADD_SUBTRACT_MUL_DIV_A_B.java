@@ -1,6 +1,8 @@
 package store.teamti;
 
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Problem: Week 1 - Basic arithmetic operations on two integers
@@ -34,10 +36,11 @@ import java.util.*;
  * </pre>
  */
 public class ADD_SUBTRACT_MUL_DIV_A_B {
-    public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            int a = scanner.nextInt();
-            int b = scanner.nextInt();
+    public static void main(String[] args) throws IOException {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            String[] input = reader.readLine().split(" ");
+            int a = Integer.parseInt(input[0]);
+            int b = Integer.parseInt(input[1]);
 
             System.out.printf("%d %d %d %d%n", a + b, a - b, a * b, a / b);
         }

@@ -1,6 +1,8 @@
 package store.teamti;
 
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Problem: Week 1 - Convert a TEXT to Upper-Case
@@ -33,16 +35,16 @@ import java.util.*;
  * </pre>
  */
 public class TO_UPPER_CASE_TEXT {
-    public static void main(String[] args) {
-        try (Scanner scanner = new Scanner(System.in)) {
-            StringBuilder text = new StringBuilder();
-            while (scanner.hasNextLine()) {
-                text.append(scanner.nextLine()).append(System.lineSeparator());
-            }
-
-            String upperCaseText = text.toString().toUpperCase();
-
-            System.out.print(upperCaseText);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder text = new StringBuilder();
+        String line;
+        while ((line = br.readLine()) != null) {
+            text.append(line).append(System.lineSeparator());
         }
+
+        String upperCaseText = text.toString().toUpperCase();
+
+        System.out.print(upperCaseText);
     }
 }

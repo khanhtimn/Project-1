@@ -1,6 +1,8 @@
 package store.teamti;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Problem: Week 1 - List all numbers from 1 to n and its squares
@@ -47,10 +49,11 @@ import java.util.Scanner;
  * </ul>
  */
 public class LIST_NBR_AND_SQUARE {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(br.readLine().trim());
 
         if (n < 1 || n > 100) {
             return;
@@ -59,7 +62,5 @@ public class LIST_NBR_AND_SQUARE {
         for (int i = 1; i <= n; i++) {
             System.out.println(i + " " + (i * i));
         }
-
-        scanner.close();
     }
 }

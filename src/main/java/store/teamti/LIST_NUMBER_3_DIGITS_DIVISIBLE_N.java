@@ -1,6 +1,8 @@
 package store.teamti;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
  * Problem: Week 1 - List sequence of integers having 3 digits divisible by n
@@ -29,14 +31,14 @@ import java.util.Scanner;
  * </pre>
  */
 public class LIST_NUMBER_3_DIGITS_DIVISIBLE_N {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int n = scanner.nextInt();
+        int n = Integer.parseInt(br.readLine().trim());
 
         if (n < 1 || n > 999) {
-            throw new IllegalArgumentException("Invalid input: n must be between 1 and 999");
+            return;
         }
 
         StringBuilder result = new StringBuilder();
@@ -51,6 +53,6 @@ public class LIST_NUMBER_3_DIGITS_DIVISIBLE_N {
 
         System.out.println(result);
 
-        scanner.close();
+        br.close();
     }
 }

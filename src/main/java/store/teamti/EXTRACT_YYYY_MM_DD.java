@@ -1,6 +1,8 @@
 package store.teamti;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,12 +47,10 @@ import java.util.regex.Pattern;
  */
 public class EXTRACT_YYYY_MM_DD {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(System.in);
-
-        String dateString = scanner.nextLine().trim();
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String dateString = reader.readLine().trim();
         String regex = "^(\\d{4})-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(dateString);
@@ -65,6 +65,6 @@ public class EXTRACT_YYYY_MM_DD {
             System.out.println("INCORRECT");
         }
 
-        scanner.close();
+        reader.close();
     }
 }
