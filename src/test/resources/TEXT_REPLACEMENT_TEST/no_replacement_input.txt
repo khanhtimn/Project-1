@@ -1,0 +1,3 @@
+VRP
+Vehicle Routing Problem
+Vehicle Routing Problem is very popular research problem, started in 1959. Recently, many variants of Vehicle Routing Problem are proposed.
