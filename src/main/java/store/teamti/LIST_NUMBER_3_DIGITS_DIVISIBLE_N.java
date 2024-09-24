@@ -36,7 +36,7 @@ public class LIST_NUMBER_3_DIGITS_DIVISIBLE_N {
         int n = scanner.nextInt();
 
         if (n < 1 || n > 999) {
-            return;
+            throw new IllegalArgumentException("Invalid input: n must be between 1 and 999");
         }
 
         StringBuilder result = new StringBuilder();

@@ -51,14 +51,12 @@ class LIST_NUMBER_3_DIGITS_DIVISIBLE_N_TEST {
     @Test
     void testInvalidInputGreaterThan999() {
         String input = "1000\n";
-        String expectedOutput = "";
-        assertEquals(expectedOutput, runTest(input));
+        assertThrows(IllegalArgumentException.class, () -> runTest(input));
     }
 
     @Test
     void testInvalidInputLessThan1() {
         String input = "0\n";
-        String expectedOutput = "";
-        assertEquals(expectedOutput, runTest(input));
+        assertThrows(IllegalArgumentException.class, () -> runTest(input));
     }
 }
