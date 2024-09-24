@@ -1,14 +1,17 @@
 package store.teamti;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
 class SUM_ARRAY_TEST {
 
     private String runTest(String input) throws IOException {
@@ -39,8 +42,7 @@ class SUM_ARRAY_TEST {
 
     @Test
     void testLargeArray() throws IOException {
-        String input = "1000000\n" + "1 ".repeat(1000000) +
-                "\n";
+        String input = "1000000\n" + "1 ".repeat(1000000) + "\n";
         String expectedOutput = "1000000";
         assertEquals(expectedOutput, runTest(input));
     }

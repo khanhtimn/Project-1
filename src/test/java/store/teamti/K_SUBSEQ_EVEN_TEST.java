@@ -1,9 +1,12 @@
 package store.teamti;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.io.*;
+import java.util.concurrent.TimeUnit;
 
+@Timeout(value = 50, unit = TimeUnit.MILLISECONDS)
 class K_SUBSEQ_EVEN_TEST {
 
     @Test

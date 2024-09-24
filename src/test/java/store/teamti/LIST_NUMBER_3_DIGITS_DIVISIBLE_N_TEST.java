@@ -2,10 +2,14 @@ package store.teamti;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
 
+@Timeout(value = 50, unit = TimeUnit.MILLISECONDS)
 class LIST_NUMBER_3_DIGITS_DIVISIBLE_N_TEST {
 
     private String runTest(String input) {

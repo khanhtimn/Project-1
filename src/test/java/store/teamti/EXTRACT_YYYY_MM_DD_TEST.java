@@ -1,13 +1,16 @@
 package store.teamti;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Timeout(value = 50, unit = TimeUnit.MILLISECONDS)
 class EXTRACT_YYYY_MM_DD_TEST {
 
     private String runTest(String input) {

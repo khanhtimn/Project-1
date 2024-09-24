@@ -1,10 +1,15 @@
 package store.teamti;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.concurrent.TimeUnit;
 
+
+@Timeout(value = 50, unit = TimeUnit.MILLISECONDS)
 class ADD_SUBTRACT_MUL_DIV_A_B_TEST {
 
     private String runTest(String input) {

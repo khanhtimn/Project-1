@@ -1,9 +1,12 @@
 package store.teamti;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+@Timeout(value = 50, unit = TimeUnit.MILLISECONDS)
 class LIST_NBR_AND_SQUARE_TEST {
 
     @Test
