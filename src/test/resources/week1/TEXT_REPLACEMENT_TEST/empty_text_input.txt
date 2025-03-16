@@ -1,2 +1,0 @@
-VRP
-Vehicle Routing Problem
